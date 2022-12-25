@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Login from './components/Login';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import ProductList from './components/ProductList';
 
 function App() {
