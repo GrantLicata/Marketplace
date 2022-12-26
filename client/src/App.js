@@ -4,6 +4,10 @@ import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import ProductList from './components/ProductList';
 import Registration from './components/Registration/Registration';
+import Categories from './components/Categories';
+import Sell from './components/Sell';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,9 +18,12 @@ function App() {
           <Route path='/' element={<ProductList/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/registration' element={<Registration/>} />
-
+          <Route path='/categories' element={<Categories/>} />
+          <Route path='/sell' element={<Sell/>} />
+          <Route path='/about' element={<About/>} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

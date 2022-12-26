@@ -4,11 +4,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from './images/market-100.png'
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Market', href: '#', current: false },
-  { name: 'Categories', href: '#', current: false },
-  { name: 'Sell', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Market', href: '/', current: false },
+  { name: 'Categories', href: '/categories', current: false },
+  { name: 'Sell', href: '/sell', current: false },
+  { name: 'About', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
