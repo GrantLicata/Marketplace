@@ -9,8 +9,11 @@ module.exports = {
         sans: ['Inter var'],
       },
     },
+    container: {
+      center: true,
+    },
   },
   plugins: [
-
+    require('@tailwindcss/forms'),
   ],
 }
