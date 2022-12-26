@@ -1,5 +1,7 @@
 import React from 'react'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
+import logo from './images/market-100.png'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -9,7 +11,7 @@ const Login = () => {
               <div>
                 <img
                   className="mx-auto h-12 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src={logo}
                   alt="Your Company"
                 />
                 <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
@@ -17,9 +19,9 @@ const Login = () => {
                 </h2>
                 <p className="mt-2 text-center text-sm text-gray-600">
                   Not a user?{' '}
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                  <Link to="/registration" className="font-medium text-indigo-600 hover:text-indigo-500">
                     Register
-                  </a>
+                  </Link>
                 </p>
               </div>
               <form className="mt-8 space-y-6" action="#" method="POST">
