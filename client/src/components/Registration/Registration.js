@@ -4,8 +4,8 @@ import logo from './images/market-100.png'
 
 const Registration = () => {
   return (
-    <div className='flex min-h-full items-center justify-center py-12 sm:px-6 lg:px-8 bg-'>
-        <form className='px-6 rounded-lg py-4 w-96'>
+    <div className='flex min-h-full items-center justify-center py-12 sm:px-6 lg:px-8'>
+        <form className='px-6 rounded-lg py-4 max-w-md'>
         {/* Note: Consider playing with grid for sizing of the wrapper */}
             <div>
                 <img
@@ -23,40 +23,41 @@ const Registration = () => {
                 Sign in
                 </Link>
             </p>
-            {/* First Name */}
-            <div className='mt-6 mb-4'>
-                <label 
-                    className='block text-sm font-medium text-gray-700' 
-                    htmlFor="first-name">
-                    First Name
-                </label>
-                <div className="relative mt-1 rounded-md shadow-sm">
-                    <input 
-                        type="text" 
-                        name="firstName" 
-                        id="firstName" 
-                        className="block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
+            <div className='flex items-baseline gap-4 mt-8'>
+                {/* First Name */}
+                <div className='mb-4'>
+                    <label 
+                        className='text-sm font-medium text-gray-700' 
+                        htmlFor="first-name">
+                        First Name
+                    </label>
+                    <div className="relative mt-1 rounded-md shadow-sm">
+                        <input 
+                            type="text" 
+                            name="firstName" 
+                            id="firstName" 
+                            className="block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                    </div>
                 </div>
-            </div>
 
-            {/* Last Name */}
-            <div className='mb-4'>
-                <label 
-                    className='block text-sm font-medium text-gray-700' 
-                    htmlFor="first-name">
-                    Last Name
-                </label>
-                <div className="relative mt-1 rounded-md shadow-sm">
-                    <input 
-                        type="text" 
-                        name="first-name" 
-                        id="first-name" 
-                        className="block w-full rounded-md border-gray-300 pl-2 pr-42 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    />
+                {/* Last Name */}
+                <div className='mb-4'>
+                    <label 
+                        className='text-sm font-medium text-gray-700' 
+                        htmlFor="first-name">
+                        Last Name
+                    </label>
+                    <div className="relative mt-1 rounded-md shadow-sm">
+                        <input 
+                            type="text" 
+                            name="first-name" 
+                            id="first-name" 
+                            className="block w-full rounded-md border-gray-300 pl-2  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        />
+                    </div>
                 </div>
             </div>
-            
 
             {/* Email */}
             <div className='mb-4'>
@@ -70,7 +71,7 @@ const Registration = () => {
                         type="email" 
                         name="email" 
                         id="email" 
-                        className="block w-full rounded-md border-gray-300 pl-2 pr-42 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     />
                 </div>
             </div>
@@ -87,7 +88,7 @@ const Registration = () => {
                         type="password" 
                         name="password" 
                         id="password" 
-                        className="block w-full rounded-md border-gray-300 pl-2 pr-42 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     />
                 </div>
             </div>
@@ -104,11 +105,10 @@ const Registration = () => {
                         type="password" 
                         name="confirm-password" 
                         id="confirm-password" 
-                        className="block w-full rounded-md border-gray-300 pl-2 pr-42 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     />
                 </div>
             </div>
-            
         </form>
     </div>
   )
