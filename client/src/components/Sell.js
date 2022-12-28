@@ -12,9 +12,8 @@ const Sell = () => {
   }, [selectedImage]);
 
   return (
-    <div className='p-6'>
-
-      <div class="px-4 mt-3 sm:px-0">
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+      <div class="mt-3 sm:px-0">
         <h3 class="text-lg font-medium leading-6 text-gray-900">Product Profile</h3>
         <p class="mt-1 text-sm text-gray-600">Enter information for the product you would like to sell with us.</p>
       </div>

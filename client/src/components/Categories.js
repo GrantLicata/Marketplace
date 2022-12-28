@@ -21,16 +21,18 @@ const categories = [
 
 const Categories = () => {
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
-      {categories.map((item) => (
-        <Link
-          key={item.name}
-          to={item.href}
-          className='w-auto h-16 m-4 flex justify-center items-center p-4 bg-slate-200 border border-slate-300 text-center rounded-lg shadow-md'
-        >
-          {item.name}
-        </Link>
-      ))}
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 pt-6'>
+        {categories.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className='w-auto h-16 flex justify-center items-center p-4 bg-slate-200 border border-slate-300 text-center rounded-lg shadow-md'
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
