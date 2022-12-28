@@ -36,7 +36,7 @@ const Registration = () => {
                             type="text" 
                             name="firstName" 
                             id="firstName" 
-                            className="block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm"
                         />
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const Registration = () => {
                             type="text" 
                             name="first-name" 
                             id="first-name" 
-                            className="block w-full rounded-md border-gray-300 pl-2  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                            className="block w-full rounded-md border-gray-300 pl-2  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm"
                         />
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const Registration = () => {
                         type="email" 
                         name="email" 
                         id="email" 
-                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm"
                     />
                 </div>
             </div>
@@ -88,7 +88,7 @@ const Registration = () => {
                         type="password" 
                         name="password" 
                         id="password" 
-                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm"
                     />
                 </div>
             </div>
@@ -105,7 +105,7 @@ const Registration = () => {
                         type="password" 
                         name="confirm-password" 
                         id="confirm-password" 
-                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        className="block w-full rounded-md border-gray-300 pl-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm"
                     />
                 </div>
             </div>
