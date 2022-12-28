@@ -8,6 +8,7 @@ import Categories from './components/Categories';
 import Sell from './components/Sell';
 import About from './components/About';
 import Footer from './components/Footer';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path='/categories' element={<Categories/>} />
           <Route path='/sell' element={<Sell/>} />
           <Route path='/about' element={<About/>} />
+          <Route path='/product' element={<ProductDetails/>} />
+          {/* The product details page will need ID specification following backend development */}
         </Routes>
       </BrowserRouter>
       <Footer/>
