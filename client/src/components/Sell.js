@@ -92,7 +92,8 @@ const Sell = () => {
                   src={imageUrl} 
                   alt={selectedImage.name} 
                   height="100px" 
-                  className='rounded-lg'/>
+                  className='rounded-lg max-h-56 w-auto'
+                />
               </div>
             )}
       </div>
