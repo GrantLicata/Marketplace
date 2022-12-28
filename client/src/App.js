@@ -6,7 +6,7 @@ import ProductList from './components/ProductList';
 import Registration from './components/Registration/Registration';
 import Categories from './components/Categories';
 import Sell from './components/Sell';
-import About from './components/About';
+import About from './components/About/About';
 import Footer from './components/Footer';
 import ProductDetails from './components/ProductDetails';
 
