@@ -12,7 +12,7 @@ const Sell = () => {
   }, [selectedImage]);
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col'>
       <div class="mt-3 sm:px-0">
         <h3 class="text-lg font-medium leading-6 text-gray-900">Product Profile</h3>
         <p class="mt-1 text-sm text-gray-600">Enter information for the product you would like to sell with us.</p>
@@ -42,7 +42,7 @@ const Sell = () => {
         <input type="text" className="block w-full rounded-md border-gray-300  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm shadow-sm mt-1" placeholder='$0.00'/>
       </div> */}
 
-      <div className='mt-4'>
+      <div className='mt-4 w-max'>
         <label htmlFor="price" className="block text-sm font-medium text-gray-700">
           Price
         </label>

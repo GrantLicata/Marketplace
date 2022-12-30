@@ -4,7 +4,7 @@ import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import ProductList from './components/ProductList';
 import Registration from './components/Registration/Registration';
-import Categories from './components/Categories';
+import Categories from './components/Categories/Categories';
 import Sell from './components/Sell';
 import About from './components/About/About';
 import Footer from './components/Footer';
