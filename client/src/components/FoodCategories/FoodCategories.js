@@ -31,7 +31,7 @@ const categories = [
 
 // >>> TO-DO: Image sizing needs to be corrected to be consistent...
 
-const Categories = () => {
+const FoodCategories = () => {
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 pt-6'>
@@ -54,4 +54,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default FoodCategories

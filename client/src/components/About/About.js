@@ -19,6 +19,4 @@ const About = () => {
   )
 }
 
-// Check this out for making the columns right:  https://tailwindcss.com/docs/columns
-
 export default About
