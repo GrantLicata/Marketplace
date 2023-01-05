@@ -22,8 +22,7 @@ function App() {
           <Route path='/categories' element={<FoodCategories/>} />
           <Route path='/sell' element={<Sell/>} />
           <Route path='/about' element={<About/>} />
-          <Route path='/product' element={<ProductDetails/>} />
-          {/* The product details page will need ID specification following backend development */}
+          <Route path='/product/:id' element={<ProductDetails/>} />
         </Routes>
       </BrowserRouter>
       <Footer/>
