@@ -1,5 +1,9 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { UserContext } from "./contexts/UserContext";
+import axios from 'axios';
+
 import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import ProductList from './components/ProductList';
@@ -11,8 +15,26 @@ import Footer from './components/Footer';
 import ProductDetails from './components/ProductDetails';
 
 function App() {
+  const [loggedUser, setLoggedUser] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/getLoggedUser", { withCredentials: true })
+      .then(
+        (res) => (
+          console.log("logged user info", res),
+          setLoggedUser({
+            id: res.data.user._id,
+            username: res.data.user.username
+          })
+        )
+      )
+      .catch((err) => console.log("logged user error", err));
+  }, []);
+
   return (
     <div>
+      <UserContext.Provider value={{loggedUser, setLoggedUser}}>
       <Navigation/>
       <BrowserRouter>
         <Routes>
@@ -26,6 +48,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer/>
+      </UserContext.Provider>
     </div>
   );
 }
