@@ -42,6 +42,8 @@ function App() {
           <>
             {/* Routes available to signed-in users */}
             <Route path='/' element={<ProductList/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/logout' element={<ProductList/>} />
             <Route path='/registration' element={<Registration/>} />
             <Route path='/categories' element={<FoodCategories/>} />
             <Route path='/sell' element={<Sell/>} />
@@ -50,9 +52,10 @@ function App() {
           </>
           :
           <>
-            {/* Routes available to all */}
+            {/* Routes available to non-users */}
             <Route path='/' element={<ProductList/>} />
             <Route path='/login' element={<Login/>} />
+            <Route path='/logout' element={<ProductList/>} />
             <Route path='/registration' element={<Registration/>} />
             <Route path='/categories' element={<FoodCategories/>} />
             <Route path='/sell' element={<Sell/>} />
