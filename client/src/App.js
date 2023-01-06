@@ -38,13 +38,28 @@ function App() {
       <Navigation/>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<ProductList/>} />
-          <Route path='/login' element={<Login/>} />
-          <Route path='/registration' element={<Registration/>} />
-          <Route path='/categories' element={<FoodCategories/>} />
-          <Route path='/sell' element={<Sell/>} />
-          <Route path='/about' element={<About/>} />
-          <Route path='/product/:id' element={<ProductDetails/>} />
+          {loggedUser != null ?
+          <>
+            {/* Routes available to signed-in users */}
+            <Route path='/' element={<ProductList/>} />
+            <Route path='/registration' element={<Registration/>} />
+            <Route path='/categories' element={<FoodCategories/>} />
+            <Route path='/sell' element={<Sell/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/product/:id' element={<ProductDetails/>} />
+          </>
+          :
+          <>
+            {/* Routes available to all */}
+            <Route path='/' element={<ProductList/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/registration' element={<Registration/>} />
+            <Route path='/categories' element={<FoodCategories/>} />
+            <Route path='/sell' element={<Sell/>} />
+            <Route path='/about' element={<About/>} />
+            <Route path='/product/:id' element={<ProductDetails/>} />
+          </>
+          }
         </Routes>
       </BrowserRouter>
       <Footer/>
