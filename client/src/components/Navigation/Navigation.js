@@ -1,13 +1,16 @@
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
+import { UserContext } from '../../contexts/UserContext'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from './images/market-100.png'
+import { NavLink } from 'react-router-dom'
+// a tags below need to be updated to the NavLink type....
 
 const navigation = [
-  { name: 'Market', href: '/', current: false },
-  { name: 'Categories', href: '/categories', current: false },
-  { name: 'Sell', href: '/sell', current: false },
-  { name: 'About', href: '/about', current: false },
+  { name: 'Market', to: '/', current: false },
+  { name: 'Categories', to: '/categories', current: false },
+  { name: 'Sell', to: '/sell', current: false },
+  { name: 'About', to: '/about', current: false },
 ]
 
 function classNames(...classes) {
@@ -15,6 +18,9 @@ function classNames(...classes) {
 }
 
 export default function Navigation() {
+
+  const { loggedUser, setLoggedUser} = useContext(UserContext);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -50,7 +56,7 @@ export default function Navigation() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
+                        href={item.to}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
@@ -92,32 +98,42 @@ export default function Navigation() {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Settings
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to="/logout"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
-                          </a>
+                          </NavLink>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <NavLink
+                            to="/login"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Log in
+                          </NavLink>
                         )}
                       </Menu.Item>
                     </Menu.Items>
