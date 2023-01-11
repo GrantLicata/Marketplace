@@ -7,10 +7,10 @@ import { NavLink } from 'react-router-dom'
 // a tags below need to be updated to the NavLink type....
 
 const navigation = [
-  { name: 'Market', to: '/', current: false },
-  { name: 'Categories', to: '/categories', current: false },
-  { name: 'Sell', to: '/sell', current: false },
-  { name: 'About', to: '/about', current: false },
+  { name: 'Market', href: '/', current: false },
+  { name: 'Categories', href: '/categories', current: false },
+  { name: 'Sell', href: '/sell', current: false },
+  { name: 'About', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
@@ -56,7 +56,7 @@ export default function Navigation() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        href={item.to}
+                        href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
@@ -98,42 +98,42 @@ export default function Navigation() {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <NavLink
-                            to="#"
+                          <a
+                            href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
-                          </NavLink>
+                          </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <NavLink
-                            to="#"
+                          <a
+                            href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Settings
-                          </NavLink>
+                          </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <NavLink
-                            to="/logout"
+                          <a
+                            href="/logout"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
-                          </NavLink>
+                          </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <NavLink
-                            to="/login"
+                          <a
+                            href="/login"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Log in
-                          </NavLink>
+                          </a>
                         )}
                       </Menu.Item>
                     </Menu.Items>
