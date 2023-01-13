@@ -13,9 +13,9 @@ const Sell = () => {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col'>
-      <div class="mt-3 sm:px-0">
-        <h3 class="text-lg font-medium leading-6 text-gray-900">Product Profile</h3>
-        <p class="mt-1 text-sm text-gray-600">Enter information for the product you would like to sell with us.</p>
+      <div className="mt-3 sm:px-0">
+        <h3 className="text-lg font-medium leading-6 text-gray-900">Product Profile</h3>
+        <p className="mt-1 text-sm text-gray-600">Enter information for the product you would like to sell with us.</p>
       </div>
 
       <div className='mt-4'>
@@ -26,12 +26,12 @@ const Sell = () => {
       </div>
 
       <div className='mt-4'>
-        <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-        <div class="mt-1">
+        <label for="description" className="block text-sm font-medium text-gray-700">Description</label>
+        <div className="mt-1">
           <textarea id="about" 
           name="about" 
           rows="3"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Enter a brief description of your product"/>
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Enter a brief description of your product"/>
         </div>
       </div>
 
