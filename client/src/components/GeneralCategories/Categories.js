@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import fruit_img from './images/fruit.jpg';
+import Navigation from '../Navigation/Navigation';
 
-
-// Pivoting to small community farm support
 // Images to be provided on each category card eventually
 const categories = [
   { name: 'Vehicles', href: '/categories/fruit', image: fruit_img },
@@ -26,24 +25,27 @@ const categories = [
 
 const GeneralCategories = () => {
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 pt-6'>
-        {categories.map((item) => (
-          <Link
-            key={item.name}
-            to={item.href}
-          >
-            <div className='w-auto'>
-              <img 
-                src={item.image} 
-                alt='Category image'
-                className=' border border-slate-200 rounded-lg shadow-md overflow-hidden'/>
-              <h3 className='text-medium text-center font-normal text-slate-700'>{item.name}</h3>
-            </div>
-          </Link>
-        ))}
+    <>
+      <Navigation/>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 pt-6'>
+          {categories.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+            >
+              <div className='w-auto'>
+                <img 
+                  src={item.image} 
+                  alt='Category image'
+                  className=' border border-slate-200 rounded-lg shadow-md overflow-hidden'/>
+                <h3 className='text-medium text-center font-normal text-slate-700'>{item.name}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

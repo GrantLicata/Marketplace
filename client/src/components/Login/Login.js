@@ -2,10 +2,12 @@ import React from 'react'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import logo from './images/market-100.png'
 import { Link } from 'react-router-dom'
+import Navigation from '../Navigation/Navigation'
 
 const Login = () => {
     return (
         <>
+          <Navigation/>
           <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
             <div className="w-full max-w-md space-y-8">
               <div>
