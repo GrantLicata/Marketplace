@@ -8,7 +8,8 @@ import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import ProductList from './components/ProductList';
 import Registration from './components/Registration/Registration';
-import FoodCategories from './components/FoodCategories/FoodCategories';
+// import FoodCategories from './components/FoodCategories/FoodCategories';
+import GeneralCategories from './components/GeneralCategories/Categories';
 import Sell from './components/Sell';
 import About from './components/About/About';
 import Footer from './components/Footer';
@@ -35,7 +36,7 @@ function App() {
   return (
     <div>
       <UserContext.Provider value={{loggedUser, setLoggedUser}}>
-      <Navigation/>
+      {/* <Navigation/> */}
       <BrowserRouter>
         <Routes>
           {loggedUser != null ?
@@ -45,7 +46,7 @@ function App() {
             <Route path='/login' element={<Login/>} />
             <Route path='/logout' element={<ProductList/>} />
             <Route path='/registration' element={<Registration/>} />
-            <Route path='/categories' element={<FoodCategories/>} />
+            <Route path='/categories' element={<GeneralCategories/>} />
             <Route path='/sell' element={<Sell/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/product/:id' element={<ProductDetails/>} />
@@ -57,7 +58,7 @@ function App() {
             <Route path='/login' element={<Login/>} />
             <Route path='/logout' element={<ProductList/>} />
             <Route path='/registration' element={<Registration/>} />
-            <Route path='/categories' element={<FoodCategories/>} />
+            <Route path='/categories' element={<GeneralCategories/>} />
             <Route path='/sell' element={<Sell/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/product/:id' element={<ProductDetails/>} />

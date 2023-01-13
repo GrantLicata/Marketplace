@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import fruit_img from './images/fruit.jpg';
+
 
 // Pivoting to small community farm support
 // Images to be provided on each category card eventually

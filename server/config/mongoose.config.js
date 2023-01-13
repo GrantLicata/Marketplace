@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/marketplace', {
     useUnifiedTopology:true
 })
 .then(( ) => {
-    console.log('Connected to CookBook DB')
+    console.log('Connected to Marketplace Database')
 }).catch((err) => {
     console.log(err)
 })

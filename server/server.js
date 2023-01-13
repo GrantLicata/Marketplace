@@ -18,7 +18,7 @@ app.use(cors({
 })
 );
 
-require('./routes/recipe.routes')(app);
+// require('./routes/post.routes')(app);
 require('./routes/user.routes')(app)
 
 

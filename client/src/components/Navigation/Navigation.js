@@ -1,25 +1,55 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useEffect } from 'react'
 import { UserContext } from '../../contexts/UserContext'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from './images/market-100.png'
-import { NavLink } from 'react-router-dom'
-// a tags below need to be updated to the NavLink type....
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
-const navigation = [
-  { name: 'Market', href: '/', current: false },
-  { name: 'Categories', href: '/categories', current: false },
-  { name: 'Sell', href: '/sell', current: false },
-  { name: 'About', href: '/about', current: false },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Navigation() {
+  
+  const navigation = [
+    { name: 'Market', href: '/', current: false },
+    { name: 'Categories', href: '/categories', current: false },
+    { name: 'Sell', href: '/sell', current: false },
+    { name: 'About', href: '/about', current: false },
+  ]
+  
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
 
   const { loggedUser, setLoggedUser} = useContext(UserContext);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/getLoggedUser", { withCredentials: true })
+      .then(
+        (res) => (
+          // console.log(res),
+          setLoggedUser({
+            id: res.data.user._id,
+            username: res.data.user.username,
+          })
+        )
+      )
+      .catch((err) => console.log(err));
+  }, []);
+
+  const handleLogout = (e) => {
+    axios
+    .get("http://localhost:8000/api/logout", { withCredentials: true })
+    .then((res) => {
+      console.log("Logged out on front end");
+      setLoggedUser("");
+      navigate("/");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -119,7 +149,8 @@ export default function Navigation() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/logout"
+                            href="#"
+                            onClick={handleLogout}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
